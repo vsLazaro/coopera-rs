@@ -11,6 +11,7 @@ import AdvertiseForm from "./components/AdvertiseForm/AdvertiseForm.tsx";
 import AddItem from "./components/AddItem/AddItem.tsx";
 import Star from "./components/Star/StarComponent.tsx";
 import Store from "./pages/Store/Store.tsx";
+import StoreButton from "./components/StoreButton/StoreButton.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/home" element={<Home />} />
       <Route path="/anuncie-sua-empresa" element={<AdvertiseForm />} />
       <Route path="/loja" element={<Store />} />
+           <Route path="/storebutton" element={<StoreButton />} />
 
       <Route path="/addItem" element={<AddItem onClick={() => console.log("Clique no botão")} />} />
       <Route path="/star" element={<Star rating={'8,4'} />} />
