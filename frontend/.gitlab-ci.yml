@@ -1,0 +1,14 @@
+stages:
+  - build
+
+default:
+  image: node:22.9
+
+before_script:
+  - rm -rf node_modules package-lock.json
+  - npm install --legacy-peer-deps
+
+build:
+  stage: build
+  script:
+    - npm run build

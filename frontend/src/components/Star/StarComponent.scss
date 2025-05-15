@@ -1,0 +1,18 @@
+.star-component {
+    display: flex;
+    align-items: center;
+    gap: 7px; // espaçamento entre ícone e nota
+  
+    .star-icon {
+      color: #FCCD2A;
+      width: 16px;
+      height: 16px;
+    }
+  
+    .star-rating {
+      color: #FCCD2A;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  

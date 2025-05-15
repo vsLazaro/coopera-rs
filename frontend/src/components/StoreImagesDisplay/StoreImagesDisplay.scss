@@ -1,0 +1,42 @@
+.store-images-display {
+  display: grid;
+  grid-template-areas:
+    "img1 img2 img3"
+    "img4 img4 img3";
+  grid-gap: 10px; /* Espaçamento entre os itens */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 0; /* Centraliza o grid */
+  width: calc(100% - 10px); /* Ajusta para considerar o grid-gap */
+  max-width: calc(100% - 10px); /* Evita que o grid ultrapasse o tamanho máximo */
+  overflow: hidden; /* Garante que nada saia do container */
+  align-items: stretch;
+}
+
+.image-container {
+  position: relative; /* Necessário para posicionar a imagem */
+  border-radius: 8px;
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse o container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.quadrada {
+    aspect-ratio: 1 / 1;
+  }
+
+  &.retangular-deitada {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+  }
+
+  &.retangular-em-pe {
+    grid-row: span 2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche o contêiner sem distorcer a imagem */
+  }
+}

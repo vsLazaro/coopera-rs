@@ -1,0 +1,69 @@
+.carousel {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  max-width: 700px
+}
+
+
+.carouselProduct img {
+  border-radius: 8px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.swiper-button-disabled::after {
+  --swiper-navigation-size: 0.5rem;
+  padding: 1rem;
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-prev {
+  left: 8px;
+}
+
+.swiper-button-next {
+  right: 8px;
+}
+
+
+.carouselProduct {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px;
+  padding: 16px 8px;
+  border-radius: 10px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.carouselProductContainer {
+  width: 50%;
+  max-width: 100%;
+}
+
+.carouselTextContainer {
+  flex: .9;
+  align-self: baseline;
+  padding-left: 8px;
+}
+
+.productName {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.productDescription {
+  font-size: 0.8rem;
+  color: gray;
+  padding-top: .5rem;
+}
+
+.productPhoto {
+  width: 100px;
+  height: 150px;
+}

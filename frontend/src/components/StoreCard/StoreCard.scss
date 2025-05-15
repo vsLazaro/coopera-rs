@@ -1,0 +1,50 @@
+
+
+.store-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.store-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.store-card-icon {
+    color: gray;
+}
+
+.store-card-name {
+    color: #808080;
+}
+
+.store-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.store-card-star-icon {
+    color: #F4C430;
+    font-size: 16px;
+}
+
+.store-card-rating-text {
+    color: #F4C430;
+    font-weight: bold;
+}
+
+.store-card-divider {
+    border-top: 1px dashed #ccc;
+    margin: 8px 0;
+}
+
+.store-card-info {
+    color: #666;
+}
+  

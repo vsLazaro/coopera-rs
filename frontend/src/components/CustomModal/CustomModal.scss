@@ -1,0 +1,84 @@
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    border-radius: 16px;
+  }
+  
+  .modal-close-button {
+    position: absolute !important;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .modal-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 25px;
+  }
+  
+  .modal-description {
+    margin-top: 8px;
+    font-family: 'Instrument Sans', sans-serif;
+    color: gray;
+    font-size: 18px;
+  }
+  
+  .modal-container-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 6px;
+    justify-content: space-between;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .modal-price {
+    color: green;
+    font-weight: bold;
+  }
+  
+
+  @media (max-width: 900px) {
+    .modal-container {
+      height: 70%;
+      overflow-y: scroll;
+      width: auto;
+    }
+    .modal-image-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .modal-image {
+      width: 60%;
+      border-radius: 10px;
+    }
+    
+  }

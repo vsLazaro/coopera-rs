@@ -1,0 +1,64 @@
+.product-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.5rem;
+    }
+
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            .chip {
+                background-color: #f0f0f0;
+                color: black;
+                border: 1px solid #ddd;
+                padding: 0.5rem 1rem;
+                border-radius: 16px;
+                cursor: pointer;
+
+                &.selected {
+                    background-color: red;
+                    color: white; 
+                    border-color: red;
+                }
+
+                &:hover {
+                    background-color: #e0e0e0;
+                }
+            }
+        }
+
+        .price-range {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .apply-filters-btn {
+        background-color: green; // Cor de fundo
+        color: white; // Cor do texto
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+
+        &:hover {
+            background-color: darkgreen; // Cor ao passar o mouse
+        }
+    }
+}

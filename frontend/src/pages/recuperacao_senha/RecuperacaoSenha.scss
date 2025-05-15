@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Istok Web';
+  overflow: hidden;
+}
+
+.main-container {
+  min-height: 100%;
+  height: 60vh;
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 650px;
+  max-height: 450px;
+}
+
+.title {
+  font-size: 35px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.info-text {
+  margin-top: 0;
+}
+
+.main-box input {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  height: 18px;
+  line-height: 18px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.error-message.show {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}

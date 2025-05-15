@@ -1,0 +1,67 @@
+body.login-page {
+    font-family: 'Istok Web';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    
+}
+
+.login-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    max-height: 450px;
+}
+
+.email-senha {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.login-box h2 {
+    font-size: 35px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.login-box a {
+    font-size: 16px;
+    color: #431ADA;
+    text-decoration: underline;
+}
+
+.error-message-login {
+    color: red;
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 10px; /* Reduz o padding em telas pequenas */
+    }
+
+    .login-box {
+        padding: 20px; /* Reduz o padding interno da caixa */
+        max-width: 90%; /* Faz a caixa ocupar quase toda a largura */
+    }
+}

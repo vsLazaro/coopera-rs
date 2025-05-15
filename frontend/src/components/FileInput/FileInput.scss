@@ -1,0 +1,57 @@
+.file-input-wrapper {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 8px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .file-input-hidden {
+    display: none;
+  }
+  
+  .file-preview {
+    position: relative;
+    margin-top: 8px;
+  }
+  
+  .file-delete {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    height: 8px;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .file-image {
+    height: 96px;
+    border-radius: 8px;
+    border: 2px solid green; // blue-500
+  }
+  
+  .file-add-button {
+    margin-top: 8px;
+    height: 96px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed green; // orange-500
+    color: green;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
