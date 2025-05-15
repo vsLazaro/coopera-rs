@@ -1,0 +1,31 @@
+{
+    "id_pai": 1,
+    "name": "Tênis Esportivo",
+    "subcategory": {
+        "color": "red",
+        "size": "large"
+    },
+    "price": 150.0,
+    "quantity": 10
+}
+
+{
+    "id": 1,
+    "name": "Tênis Esportivo",
+    "description": "Tênis confortável para corrida",
+    "photo": "https://picsum.photos/100/100",
+    "category": [
+        "esportivo"
+    ],
+    "subcategory": {
+        "color": [
+            "red",
+            "blue"
+        ],
+        "size": [
+            "large",
+            "medium"
+        ]
+    },
+    "price": 150.0
+}
