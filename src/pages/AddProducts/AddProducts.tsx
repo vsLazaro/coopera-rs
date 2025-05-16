@@ -108,7 +108,7 @@ export function AddProducts() {
                         <div className="subcategoryContainer">
                             <TextField
                                 variant="outlined"
-                                label={`Sub-Categoria ${i + 1}`}
+                                label={`Ex: Cor`} 
                                 className="subcategorySelector"
                             />
 
@@ -169,7 +169,7 @@ export function AddProducts() {
                     onClick={() => {
                     }}
                 >
-                    Confirmar
+                    Concluir
                 </Button>
             </Grid>
         </Grid>
