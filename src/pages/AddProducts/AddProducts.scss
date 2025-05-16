@@ -1,0 +1,161 @@
+* {
+  font-family: 'Istok Web', sans-serif;
+}
+
+.title {
+  justify-self: center;
+  padding: 2rem;
+  font-size: 2.2rem;
+}
+
+.file-input-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.file-add-button {
+  margin: 0;
+  padding: 5rem 2rem;
+}
+
+.mainContainer {
+  justify-self: center;
+  width: clamp(20rem, 100%, 40rem);
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.productDescriptionContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.productDescription {
+  resize: none;
+  width: 100%;
+  height: 6rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.categorySelector.open-modal {
+  width: 100%;
+}
+
+.atribuirCaracteristicas {
+  align-items: center;
+}
+
+.subcategoryMainContainer {
+  background-color: #D9D9D980;
+  padding: 1rem;
+  border-radius: 8px
+}
+
+.subcategoryContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+.subcategorySelector {
+  width: 100%;
+}
+
+.addButton {
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.addButton:active {
+  scale: 90%;
+}
+
+.excludeSubcategoryButton {
+  color: #FF2626;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 100%;
+  right: -1.5rem;
+  top: -2.5rem;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.excludeSubcategoryButton:active {
+  scale: 90%;
+}
+
+
+.atribuirCaracteristicas Button{
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  padding: 1rem;
+  border-radius: 100%;
+  color: black;
+}
+
+
+
+// Seção de "Preço" da página
+.precoContainer {
+  align-items: center;
+}
+
+
+// Esconder as setas de aumentar/diminuir valor do TextField numérico
+.precoTextField input[type="number"]::-webkit-outer-spin-button,
+.precoTextField input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.precoTextField input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// Botão "Confirmar"
+.confirmButton {
+  align-self: center;
+  width: 10rem;
+}
+
+.confirmButton.MuiButton-contained {
+  background-color: #008C43;
+  color: white;
+}
+
+
+// Cores dos outlines dos TextFields do MUI
+.MuiOutlinedInput-root {
+  --outline-color: #008C43;
+  --outline-hover: #008C43;
+  --outline-focus: #008C43;
+  border-radius: 8px;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--outline-color);
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--outline-hover);
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--outline-focus) !important;
+}
+
+
+.MuiInputLabel-root.Mui-focused {
+  color: #035f2f !important;
+}

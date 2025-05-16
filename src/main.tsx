@@ -11,25 +11,27 @@ import AdvertiseForm from "./components/AdvertiseForm/AdvertiseForm.tsx";
 import AddItem from "./components/AddItem/AddItem.tsx";
 import Star from "./components/Star/StarComponent.tsx";
 import Store from "./pages/Store/Store.tsx";
+import { AddProducts } from './pages/AddProducts/AddProducts.tsx';
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/cadastro" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/mudar-senha" element={<ChangePassword />} />
-      <Route path="/esqueceu-senha" element={<RecuperacaoSenha />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/anuncie-sua-empresa" element={<AdvertiseForm />} />
-      <Route path="/loja" element={<Store />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/cadastro" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/mudar-senha" element={<ChangePassword />} />
+        <Route path="/esqueceu-senha" element={<RecuperacaoSenha />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/anuncie-sua-empresa" element={<AdvertiseForm />} />
+        <Route path="/loja" element={<Store />} />
 
-      <Route path="/addItem" element={<AddItem onClick={() => console.log("Clique no botão")} />} />
-      <Route path="/star" element={<Star rating={'8,4'} />} />
+        <Route path="/addItem" element={<AddItem onClick={() => console.log("Clique no botão")} />} />
+        <Route path="/star" element={<Star rating={'8,4'} />} />
+        <Route path="/add-products" element={<AddProducts/>} />
 
 
 
 
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
 );
