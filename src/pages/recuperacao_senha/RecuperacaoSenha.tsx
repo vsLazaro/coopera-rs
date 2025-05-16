@@ -4,6 +4,7 @@ import "./RecuperacaoSenha.scss";
 import { useState } from "react";
 import { PopupMessage } from "../../components/popupMessage/PopupMessage.tsx";
 import { Header } from "../../components/header/header.tsx";
+import { recuperarSenha } from "../../services/FetchSenhaRecovery/FetchSenhaRecovery.ts";
 
 export function RecuperacaoSenha() {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -15,15 +16,21 @@ export function RecuperacaoSenha() {
     return regex.test(email);
   };
 
-  const handleConfirm = () => {
-    if (!validateEmail(email)) {
-      setError("Digite um e-mail válido.");
-      return;
-    }
+const handleConfirm = async () => {
+  if (!validateEmail(email)) {
+    setError("Digite um e-mail válido.");
+    return;
+  }
 
-    setError("");
+  setError("");
+
+  try {
+    await recuperarSenha(email);
     setPopupOpen(true);
-  };
+  } catch (err: any) {
+    setError(err.message || "Erro ao enviar e-mail. Tente novamente.");
+  }
+};
 
   return (
     <>
