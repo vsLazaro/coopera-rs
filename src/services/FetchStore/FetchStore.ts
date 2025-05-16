@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "../../config";
 
 export interface Loja {
   id: number;
@@ -10,6 +11,6 @@ export interface Loja {
 }
 
 export const fetchLojas = async (): Promise<Loja[]> => {
-  const res = await fetch('http://localhost:3000/lojas');
+  const res = await fetch(`${BACKEND_URL}/api/lojas`);
   return await res.json();
 };
