@@ -1,0 +1,46 @@
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+
+  .categoria-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.5rem;
+
+    &.ativa {
+      color: #e53935;
+      border-bottom-color: #e53935;
+    }
+
+    &:hover {
+      color: #d32f2f;
+    }
+  }
+}
+
+.titleContainer {
+  justify-self: center;
+  align-items: start;
+  padding-top: 2rem;
+}
+
+.p1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+}
+
+.search-bar-container {
+  width: clamp(10rem, 100%, 25rem);
+  padding-bottom: 2rem;
+}

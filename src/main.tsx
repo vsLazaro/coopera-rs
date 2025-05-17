@@ -12,6 +12,7 @@ import AddItem from "./components/AddItem/AddItem.tsx";
 import Star from "./components/Star/StarComponent.tsx";
 import Store from "./pages/Store/Store.tsx";
 import { AddProducts } from './pages/AddProducts/AddProducts.tsx';
+import { SearchPage } from "./pages/SearchPage/SearchPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/addItem" element={<AddItem onClick={() => console.log("Clique no botão")} />} />
         <Route path="/star" element={<Star rating={'8,4'} />} />
         <Route path="/add-products" element={<AddProducts/>} />
+        <Route path="/search-page" element={<SearchPage/>} />
 
 
 

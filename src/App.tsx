@@ -81,6 +81,10 @@ function App() {
                 text="AddProducts"
                 onClick={() => (window.location.href = "/add-products")}
             />
+            <CustomButton
+                text="SearchPage"
+                onClick={() => (window.location.href = "/search-page")}
+            />
         </>
     );
 }
