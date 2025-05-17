@@ -4,12 +4,15 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import { Header } from "../../components/header/header";
 import Grid from "@mui/material/Grid2";
 import "./ChangePassword.scss";
+import { changePassword } from "../../services/ChangePasswordService/ChangePasswordService.ts";
 
 function ChangePassword() {
     const [newPassword, setNewPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [passwordFocused, setPasswordFocused] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
+    const [token, setToken] = useState<string | null>(null);
 
     const passwordRequirements = [
         { label: "Mínimo 6 caracteres", valid: newPassword.length >= 6 },
@@ -21,13 +24,20 @@ function ChangePassword() {
 
     useEffect(() => {
         document.body.classList.add('changePassword-page');
-
+        // Pegando o token da URL manualmente
+        const params = new URLSearchParams(window.location.search);
+        setToken(params.get("token"));
         return () => {
             document.body.classList.remove('changePassword-page');
         };
     }, []);
 
-    const handlePasswordChange = () => {
+    const handlePasswordChange = async () => {
+        if (!token) {
+            setErrorMessage("Token inválido ou expirado.");
+            return;
+        }
+
         const allRequirementsMet = passwordRequirements.every((req) => req.valid);
 
         if (!allRequirementsMet) {
@@ -41,7 +51,12 @@ function ChangePassword() {
         }
 
         setErrorMessage("");
-        alert("Senha alterada com sucesso!");
+        try {
+            await changePassword(token, newPassword);
+            setSuccessMessage("Senha alterada com sucesso!");
+        } catch (err: any) {
+            setErrorMessage(err.message || "Erro ao alterar senha.");
+        }
     };
 
     return (
@@ -87,6 +102,7 @@ function ChangePassword() {
                         </Grid>
                     </Grid>
                     {errorMessage && <p className="error-message">{errorMessage}</p>}
+                    {successMessage && <p className="success-message">{successMessage}</p>}
                     <Grid size={{ xs: 12 }} marginTop={2}>
                         <CustomButton
                             text="Confirmar"

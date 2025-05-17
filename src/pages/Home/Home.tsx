@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import StoreCarousel, { Loja } from "../../components/StoreCarousel/StoreCarousel";
-import { Header } from "../../components/header/header";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./Home.scss";
 import { Carousel } from '../../components/CarouselPatrocinadores/carousel';
+import { HeaderCompleto } from "../../components/header/headerCompleto";
 
 const categorias = ["Roupas e Tecidos", "Eletrônicos", "Outlets", "Móveis e Decoração"];
 
@@ -183,7 +183,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <HeaderCompleto />
       <main className="home-container">
         <section className="hero">
           <h1>Encontre sua próxima conexão</h1>

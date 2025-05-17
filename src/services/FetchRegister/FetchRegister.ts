@@ -1,3 +1,5 @@
+import { BACKEND_URL } from "../../config";
+
 export interface RegisterPayload {
     nome: string;
     telefone: string;
@@ -7,7 +9,7 @@ export interface RegisterPayload {
   
   export const registerUser = async (payload: RegisterPayload) => {
     try {
-      const response = await fetch("http://localhost:8080/api/auth/register", {
+      const response = await fetch(`${BACKEND_URL}/api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

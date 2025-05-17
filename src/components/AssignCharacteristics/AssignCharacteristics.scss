@@ -1,0 +1,80 @@
+* {
+  font-family: 'Istok Web', sans-serif
+}
+
+
+.assignTitle {
+  font-size: 2rem;
+  padding: 0;
+}
+
+
+.modalBackground {
+  z-index: 10;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modalWindow {
+  z-index: 20;
+  width: clamp(20rem, 100%, 40rem);
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0 , 0.3);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.characteristicsContainer {
+  padding: 1rem 0 0 1rem;
+  width: 100%;
+  flex: 1;
+}
+
+.characteristicsField {
+  width: 95%;
+}
+
+.buttonContainer {
+  padding-top: 1rem;
+}
+
+.assignButton.MuiButton-contained {
+  background-color: #008C43;
+  color: white;
+}
+
+.cancelButton.MuiButton-contained {
+  background-color: #FF2626 ;
+  color: white;
+}
+
+.addCharacteristicButton {
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.excludeCharacteristicButton {
+  color: #FF2626;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 100%;
+  right: 1rem;
+  top: -.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.textFieldContainer {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+
+}

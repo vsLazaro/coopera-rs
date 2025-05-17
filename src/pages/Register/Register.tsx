@@ -7,7 +7,7 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import "@/pages/Register/Register.scss";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { registerUser } from "../../services/FetchRegister/FetchRegister.tsx";
+import { registerUser } from "../../services/FetchRegister/FetchRegister.ts";
 
 function Register() {
   const [password, setPassword] = useState("");
