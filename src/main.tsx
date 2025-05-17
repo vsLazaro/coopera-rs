@@ -28,7 +28,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/storebutton" element={<StoreButton />} />
       <Route path="/addItem" element={<AddItem onClick={() => console.log("Clique no botão")} />} />
       <Route path="/star" element={<Star rating={'8,4'} />} />
-      <Route path="/add-products" element={<AddProducts/>} /
+      <Route path="/add-products" element={<AddProducts/>} />
 
     </Routes>
   </BrowserRouter>
