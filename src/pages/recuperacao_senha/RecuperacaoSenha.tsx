@@ -5,6 +5,7 @@ import { useState } from "react";
 import { PopupMessage } from "../../components/popupMessage/PopupMessage.tsx";
 import { Header } from "../../components/header/header.tsx";
 import { recuperarSenha } from "../../services/FetchSenhaRecovery/FetchSenhaRecovery.ts";
+import { FRONTEND_URL } from "../../config.ts";
 
 export function RecuperacaoSenha() {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -25,7 +26,7 @@ const handleConfirm = async () => {
   setError("");
 
   try {
-    await recuperarSenha(email);
+    await recuperarSenha(email , `${FRONTEND_URL}/mudar-senha`);
     setPopupOpen(true);
   } catch (err: any) {
     setError(err.message || "Erro ao enviar e-mail. Tente novamente.");

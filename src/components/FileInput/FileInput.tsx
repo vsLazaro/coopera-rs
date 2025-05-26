@@ -7,9 +7,10 @@ type PreviewFile = File & { preview: string };
 interface FileInputProps {
   onChange?: (files: PreviewFile[]) => void;
   limit: number;
+  addButtonPadding?: string;
 }
 
-const FileInput = ({ onChange, limit }: FileInputProps) => {
+const FileInput = ({ onChange, limit, addButtonPadding }: FileInputProps) => {
   const [files, setFiles] = useState<PreviewFile[]>([]);
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -51,6 +52,7 @@ const FileInput = ({ onChange, limit }: FileInputProps) => {
       {files?.length < limit && (
         <div
           className="file-add-button"
+          style={addButtonPadding ? { padding: addButtonPadding } : undefined}
           onClick={() => fileRef.current?.click()}
         >
           <span>

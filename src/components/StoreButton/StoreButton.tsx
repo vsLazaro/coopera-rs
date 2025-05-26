@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import "./StoreButton.scss";
 import CustomButton from "../CustomButton/CustomButton";
 
+interface StoreButtonProps {
+  activeTabDefault?: string;
+}
+
 const tabs = ["Visão geral", "Informações", "Itens", "Avaliações", "Chat"];
 
-const StoreButton: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Visão geral");
+const StoreButton: React.FC<StoreButtonProps> = ({ activeTabDefault = "Visão geral" }) => {
+  const [activeTab, setActiveTab] = useState(activeTabDefault);
 
   const handleClick = (tab: string) => {
     setActiveTab(tab);
@@ -24,7 +28,7 @@ const StoreButton: React.FC = () => {
               onClick={() => handleClick(tab)}
               styles={{
                 backgroundColor: 'transparent',
-                color: activeTab === tab ? '#000' : '#666',
+                color: activeTab === tab ? '#000' : '#000',
                 fontWeight: activeTab === tab ? '500' : 'normal',
                 padding: '12px 0',
                 textTransform: 'none',
@@ -34,7 +38,7 @@ const StoreButton: React.FC = () => {
                 fontSize: '17.5px',
                 '&:hover': {
                   backgroundColor: 'transparent',
-                  color: '#333',
+                  color: '#000',
                   boxShadow: 'none'
                 }
               }}

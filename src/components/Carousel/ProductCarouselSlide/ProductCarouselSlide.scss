@@ -1,0 +1,43 @@
+.carouselProduct img {
+  border-radius: 8px;
+}
+
+.carouselProduct {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px;
+  padding: 16px 8px;
+  border-radius: 10px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  max-height: 250px;
+}
+
+.carouselProductContainer {
+  width: 100%;
+  max-width: 300px;
+}
+
+.carouselTextContainer {
+  flex: .9;
+  align-self: baseline;
+  padding-left: 8px;
+}
+
+.productName {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.productDescription {
+  font-size: 0.8rem;
+  color: gray;
+  padding-top: .5rem;
+}
+
+.productPhoto {
+  width: 100px;
+  height: 150px;
+}

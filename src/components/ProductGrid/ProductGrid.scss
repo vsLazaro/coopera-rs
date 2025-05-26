@@ -1,0 +1,29 @@
+.product-wrapper {
+  padding: 32px;
+
+  .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .product-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .delete-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

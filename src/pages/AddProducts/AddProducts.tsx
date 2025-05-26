@@ -67,7 +67,7 @@ export function AddProducts() {
             <Grid container spacing={2} direction="column" className="mainContainer">
                 <Grid container direction="row">
                     <div className="fileInput">
-                        <FileInput onChange={handlePreviewFileChange} limit={1}/>
+                        <FileInput onChange={handlePreviewFileChange} limit={1} addButtonPadding="5rem 2rem"/>
                     </div>
 
                     <Grid container direction="column" className="productDescriptionContainer">

@@ -1,0 +1,40 @@
+.store-products {
+    display: flex;
+    padding: 20px 16px;
+}
+  
+.store-container-products {
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.store-header-products {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 0;
+  gap: 10px;
+}
+
+.product-card-horizontal {
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.MuiCardContent-root {
+  padding: 0;
+  padding-left: 12px;
+}
+
+@media (max-width: 1300px) {
+  .store-container-products {
+    width: 100%;
+  }
+}
+  

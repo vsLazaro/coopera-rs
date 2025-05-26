@@ -13,8 +13,10 @@ import { normalizeText } from "../../components/ProductFilter/ProductFilter";
 import { Product } from '../../services/interfaces/Product.ts';
 import Pagination from "../../components/Pagination/Pagination";
 import ChatScreen from '../../components/ChatScreen/ChatScreen.tsx';
+import { lojasMock, productsMock } from '../../mocks.tsx';
+import StoreProducts from '../../components/StoreProducts/StoreProducts.tsx';
 
-type ImageType = 'quadrada' | 'retangular-deitada' | 'retangular-em-pe';
+type ImageType = "quadrada" | "retangular-deitada" | "retangular-em-pe";
 
 interface Image {
   id: number;
@@ -31,18 +33,19 @@ const createImage = (id: number, src: string, type: ImageType): Image => ({
 //tab Visao Geral
 const Store: React.FC = () => {
   const [isFavorited, setIsFavorited] = useState(false);
-  const [activeTab, setActiveTab] = useState('visao-geral');
+  const [activeTab, setActiveTab] = useState("visao-geral");
 
   const store = {
     name: 'Loja Tecidos Nossa Senhora',
+    description: 'Somos uma empresa tradicional e que ao longo de seus 60 anos consolidou sua posição no setor têxtil. Com o passar do tempo ampliou sua gama de produtos e iniciou um trabalho com tecidos finos, para festas, noivas, madrinhas e tecidos para decoração. \n\nPrezamos sempre em oferecer produtos com qualidade e estar em sintonia com os últimos lançamentos do mercado e tendências da moda. Com um sistema de vendas personalizado, com vendedores extremamente experientes, buscamos sempre a satisfação plena dos nossos clientes.',
     address: 'Av. Guaíba, 2658 - Porto Alegre/RS',
     rating: 8.4,
     icon: 'https://picsum.photos/200/300',
     images: [
-      createImage(1, 'https://picsum.photos/200/300', 'retangular-deitada'),
-      createImage(2, 'https://picsum.photos/200/300', 'retangular-em-pe'),
-      createImage(3, 'https://picsum.photos/200/300', 'quadrada'),
-      createImage(4, 'https://picsum.photos/200/300', 'quadrada'),
+      createImage(1, "https://picsum.photos/200/300", "retangular-deitada"),
+      createImage(2, "https://picsum.photos/200/300", "retangular-em-pe"),
+      createImage(3, "https://picsum.photos/200/300", "quadrada"),
+      createImage(4, "https://picsum.photos/200/300", "quadrada"),
     ],
   };
 
@@ -53,7 +56,7 @@ const Store: React.FC = () => {
   //tabs menu
   const renderTabContent = () => {
     switch (activeTab) {
-      case 'visao-geral':
+      case "visao-geral":
         return (
           <>
             <section className="store-images">
@@ -65,11 +68,20 @@ const Store: React.FC = () => {
           </>
         );
       case 'informacoes':
-        return <div>Conteúdo das Informações</div>;
+        return (
+          <div className="information-tab">
+            <div className="map-section">
+              <StoreMap address={store.address} />
+            </div>
+            <div className="description-section">
+              <p>{store.description}</p>
+            </div>
+          </div>
+        );
       case 'itens':
         return (<StoreItems />);
       case 'avaliacoes':
-        return <div>Conteúdo das Avaliações</div>;
+        return <StoreProducts stores={lojasMock} products={productsMock} />;
       case 'chat':
         return (<Chat />)
       default:
@@ -84,32 +96,32 @@ const Store: React.FC = () => {
         <SearchBar />
         <nav className="store-tabs">
           <button
-            className={activeTab === 'visao-geral' ? 'active' : ''}
-            onClick={() => setActiveTab('visao-geral')}
+            className={activeTab === "visao-geral" ? "active" : ""}
+            onClick={() => setActiveTab("visao-geral")}
           >
             Visão Geral
           </button>
           <button
-            className={activeTab === 'informacoes' ? 'active' : ''}
-            onClick={() => setActiveTab('informacoes')}
+            className={activeTab === "informacoes" ? "active" : ""}
+            onClick={() => setActiveTab("informacoes")}
           >
             Informações
           </button>
           <button
-            className={activeTab === 'itens' ? 'active' : ''}
-            onClick={() => setActiveTab('itens')}
+            className={activeTab === "itens" ? "active" : ""}
+            onClick={() => setActiveTab("itens")}
           >
             Itens
           </button>
           <button
-            className={activeTab === 'avaliacoes' ? 'active' : ''}
-            onClick={() => setActiveTab('avaliacoes')}
+            className={activeTab === "avaliacoes" ? "active" : ""}
+            onClick={() => setActiveTab("avaliacoes")}
           >
             Avaliações
           </button>
           <button
-            className={activeTab === 'chat' ? 'active' : ''}
-            onClick={() => setActiveTab('chat')}
+            className={activeTab === "chat" ? "active" : ""}
+            onClick={() => setActiveTab("chat")}
           >
             Chat
           </button>
@@ -124,29 +136,26 @@ const Store: React.FC = () => {
               {/* Botão do WhatsApp */}
               <button
                 className="icon-button"
-                onClick={() => console.log('Abrir WhatsApp')}
+                onClick={() => console.log("Abrir WhatsApp")}
               >
-                <WhatsAppIcon style={{ color: '#25D366' }} />
+                <WhatsAppIcon style={{ color: "#25D366" }} />
               </button>
 
               {/* Botão de Favoritar */}
-              <button
-                className="icon-button"
-                onClick={toggleFavorite}
-              >
+              <button className="icon-button" onClick={toggleFavorite}>
                 {isFavorited ? (
-                  <FavoriteIcon style={{ color: '#e74c3c' }} />
+                  <FavoriteIcon style={{ color: "#e74c3c" }} />
                 ) : (
-                  <FavoriteBorderIcon style={{ color: '#e74c3c' }} />
+                  <FavoriteBorderIcon style={{ color: "#e74c3c" }} />
                 )}
               </button>
 
               {/* Botão de Compartilhar */}
               <button
                 className="icon-button"
-                onClick={() => console.log('Compartilhar')}
+                onClick={() => console.log("Compartilhar")}
               >
-                <ShareIcon style={{ color: '#333' }} />
+                <ShareIcon style={{ color: "#333" }} />
               </button>
             </div>
           </div>

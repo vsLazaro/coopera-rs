@@ -1,11 +1,17 @@
 import axios from 'axios';
 import { BACKEND_URL } from '../../config';
+import CryptoJS from 'crypto-js';
 
 export const login = async (email: string, password: string) => {
     try {
-        const response = await axios.post(`${BACKEND_URL}/api/auth/login`, { email, password }, {
-            withCredentials: true
-        });
+        // Criptografar a senha com SHA-256
+        const hashedPassword = CryptoJS.SHA256(password).toString();
+
+        const response = await axios.post(
+            `${BACKEND_URL}/api/auth/login`,
+            { email, password: hashedPassword },
+            { withCredentials: true }
+        );
 
         return response.data;
 
@@ -29,4 +35,3 @@ export const login = async (email: string, password: string) => {
         }
     }
 };
-

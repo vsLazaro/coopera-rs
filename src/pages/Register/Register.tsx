@@ -57,10 +57,10 @@ function Register() {
     }
 
     const payload = {
-      nome: name,
-      telefone: phone.replace(/\D/g, ""),
+      name,
+      phone: phone.replace(/\D/g, ""),
       email,
-      senha: password,
+      password,
     };
 
     try {

@@ -1,0 +1,32 @@
+.carousel {
+  padding: 1rem 1rem;
+  width: fit-content;
+  max-width: 50rem;
+  height: fit-content;
+}
+
+.carouselSlide {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.swiper-button-disabled::after {
+  --swiper-navigation-size: 0.5rem;
+  padding: 1rem;
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-prev {
+  left: 8px;
+}
+
+.swiper-button-next {
+  right: 8px;
+}

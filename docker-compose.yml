@@ -1,6 +1,8 @@
 services:
   frontend:
-    build: .
+    image: 1srael/coopera-rs-frontend:latest
     ports:
-      - "8081:80"
+      - "80:80"
     container_name: frontend
+    restart: unless-stopped
+

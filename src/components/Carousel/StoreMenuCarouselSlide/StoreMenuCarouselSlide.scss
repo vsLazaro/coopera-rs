@@ -1,0 +1,43 @@
+.carouselMenuStore {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  height: 20rem;
+  max-width: 300px;
+  width: 100%;
+  flex-wrap: nowrap
+}
+
+.carouselMenuTextContainer {
+  padding-bottom: 4px;
+  color: RGB(0, 0, 0, 0.6);
+  flex-wrap : nowrap;
+}
+
+.menuStoreName {
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1rem 0 0 1rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.menuStoreAddress {
+  padding: 0 0 0 1rem;
+}
+
+.menuStoreAddress, .separator, .distance {
+  color: RGB(0, 0, 0, 0.6);
+}
+
+.menuStoreRating {
+  padding: 0 0 1rem 1rem;
+}
+
+.menuStorePhoto {
+  width: auto;
+  max-width: 100%;
+  height: 45%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
